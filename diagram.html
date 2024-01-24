@@ -1,0 +1,7 @@
+  User -->|Writes something| (Text Field)
+  User -->|Clicks Save| C(Save Button)
+  Browser --> Server: Sending user input
+  activate Server
+  Browser--> Server GET: https://studies.cs.helsinki.fi/exampleapp/notes
+  Server-->>Browser: Reloading page containing new user input
+  deactivate server
