@@ -1,0 +1,10 @@
+
+    User->>Browser: Open SPA at /spa
+    Browser->>SPA Backend: Fetch initial HTML and JS
+    SPA Backend-->>Browser: Send initial HTML and JS
+    Browser->>User: Render single-page application
+
+    User->>Browser: Enter new note and click save
+    Browser->>SPA Backend: POST /new_note with note content
+    SPA Backend-->>Browser: Respond with updated note list
+    Browser->>User: Update UI to show new note
